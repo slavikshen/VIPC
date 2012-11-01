@@ -46,10 +46,10 @@
     
 }
 
-+ (void)invoke:(NSString*)scheme withArgs:(NSDictionary*)args {
++ (void)invoke:(NSString*)scheme withArg:(id<NSCoding>)arg; {
 
 
-    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:args];
+    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:arg];
 	NSString* base64 = [data base64EncodedString];
     NSString* encoded = [base64 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     

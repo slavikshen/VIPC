@@ -21,7 +21,7 @@
 + (NSArray*)cookiesForURL:(NSURL*)url;
 + (void)setCookies:(NSArray*)cookies forURL:(NSURL*)url;
 
-+ (void)invoke:(NSString*)scheme withArgs:(NSDictionary*)args;
++ (void)invoke:(NSString*)scheme withArg:(id<NSCoding>)arg;
 
 + (NSDictionary*)IPCRequestForURLRequest:(NSURLRequest*)request;
 
